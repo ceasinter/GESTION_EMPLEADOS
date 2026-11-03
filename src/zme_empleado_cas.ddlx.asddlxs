@@ -1,0 +1,64 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Empleado',
+    typeNamePlural: 'Empleados',
+    title: { type: #STANDARD, value: 'Name' }
+  }
+}
+
+annotate view zc_empleado_cas with
+{
+  @UI.facet: [
+    {
+      id: 'DetalleEmpleado',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Detalle Empleado',
+      position: 10
+    }
+  ]
+
+  @UI.hidden: true
+  EmployeeUuid;
+
+
+  @UI: {
+    lineItem: [{ position: 10, importance: #HIGH }],
+    identification: [{ position: 10 }],
+    selectionField: [{ position: 10 }]
+  }
+  @EndUserText.label: 'Nombre'
+  Name;
+
+  @UI: {
+    lineItem: [{ position: 20, importance: #HIGH }],
+    identification: [{ position: 20 }],
+    selectionField: [{ position: 20 }]
+  }
+  @EndUserText.label: 'Departamento'
+  Department;
+
+  @UI: {
+    lineItem: [{ position: 30, importance: #MEDIUM }],
+    identification: [{ position: 30 }]
+  }
+  @EndUserText.label: 'Id Gerente'
+  ManagerId;
+
+  @UI: {
+    lineItem: [{ position: 40, importance: #HIGH }],
+    identification: [{ position: 40 }],
+    selectionField: [{ position: 30 }]
+  }
+  @EndUserText.label: 'Estátus'
+  Status;
+
+  @UI.identification: [{ position: 50 }]
+  @EndUserText.label: 'Fecha Cración'
+  CreatedAt;
+
+  @UI.identification: [{ position: 60 }]
+  @EndUserText.label: 'Fecha Modificación'
+  ChangedAt;
+}

@@ -1,0 +1,5 @@
+CLASS zbp_r_empleado_cas DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zr_empleado_cas.
+ENDCLASS.
+
+CLASS zbp_r_empleado_cas IMPLEMENTATION.
+ENDCLASS.
